@@ -4,13 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "generate": "npm start"
+    "start": "node dist/index.js",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "generate": "npm run build && npm start"
   },
   "author": "sgobotta",
   "license": "ISC",
   "dependencies": {
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "rimraf": "^2.6.3"
   }
 }
