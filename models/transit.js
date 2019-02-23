@@ -8,7 +8,7 @@ const { randomize } = faker.helpers
 const vehicleBrands = require('./../fixtures/vehicle-brands.json')
 const vehicleModels = require('./../fixtures/vehicle-models.json')
 
-const createSingle = ({ args } = {}) => {
+const Model = () => {
   const vehicleName = randomize(vehicleBrands)
   const vehicleBrand = randomize(vehicleModels[vehicleName])
   const dateFormat = 'DD/MM/YYYY'
@@ -37,7 +37,7 @@ const createSingle = ({ args } = {}) => {
     status: originPackage.status === 'waiting' ? 'waiting' : faker.helpers.randomize(['waiting', 'delivered'])
   }
 
-  const _args = {
+  const args = {
     id: numbers.randomBetween(1, 250000),
     transportName: faker.company.companyName(),
     driverName: `${faker.name.firstName()} ${faker.name.lastName()}`,
@@ -74,18 +74,10 @@ const createSingle = ({ args } = {}) => {
       status: destinationPackage.status
     }
   }
-  return Object.assign({}, _args, args)
+  return args
 }
 
-const createMany = ({ amount, args = {} }) => {
-  const models = Array.from({ length: amount }).map((x, i) => {
-    return createSingle({ args })
-  });
-  return models
-}
-
-// We use module.exports to dynamically require them in index.js
+// We use module.exports to dynamically require the model
 module.exports = {
-  createSingle,
-  createMany
+  Model
 }
