@@ -11,11 +11,10 @@ const vehicleModels = require('./../fixtures/vehicle-models.json')
 const Model = () => {
   const vehicleName = randomize(vehicleBrands)
   const vehicleBrand = randomize(vehicleModels[vehicleName])
-  const dateFormat = 'DD/MM/YYYY'
   const createdAt = faker.date.past()
-  const formmatedCreatedAt = moment(createdAt).format(dateFormat)
+  const formmatedCreatedAt = moment(createdAt).format()
   const updatedAt = faker.date.recent()
-  const formmatedUpdatedAt = moment(updatedAt).format(dateFormat)
+  const formmatedUpdatedAt = moment(updatedAt).format()
   const originPackage = {
     coordinates: getLocation(),
     address: {
