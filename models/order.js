@@ -5,20 +5,22 @@ import { getLocation, numbers } from '../lib/helpers'
 faker.locale = 'es'
 const { randomize } = faker.helpers
 
-const shipmentTypes  = require('../fixtures/shipment-types.json')
-const truckTypes     = require('../fixtures/truck-types.json')
-const trailerTypes   = require('../fixtures/trailer-types.json')
-const packagingTypes = require('../fixtures/packaging-types.json')
-const productTypes   = require('../fixtures/product-types.json')
+const shipmentContentTypes  = require('../fixtures/shipment-content-types.json')
+const truckTypes            = require('../fixtures/truck-types.json')
+const trailerTypes          = require('../fixtures/trailer-types.json')
+const packagingTypes        = require('../fixtures/packaging-types.json')
+const productTypes          = require('../fixtures/product-types.json')
 
 const Model = () => {
   const dateFormat = 'DD/MM/YYYY'
   const createdAt = faker.date.recent()
 
-  const originStartShippingPeriod = randomize(['sin definir', moment(createdAt).add(3, 'days').format()])
-  const originEndShippingPeriod = originStartShippingPeriod === 'sin definir' ? 'sin definir' : moment(createdAt).add(10, 'hours').format()
-  const destinationStartShippingPeriod = randomize(['sin definir', moment(createdAt).add(20, 'days').format()])
-  const destinationEndShippingPeriod = destinationStartShippingPeriod === 'sin definir' ? 'sin definir' : moment(createdAt).add(20, 'days').add(10, 'hours').format()
+  const originStartShippingPeriod = randomize(['', moment(createdAt).add(3, 'days').format()])
+  const originEndShippingPeriod = originStartShippingPeriod === '' ? '' : moment(createdAt).add(10, 'hours').format()
+  const destinationStartShippingPeriod = randomize(['', moment(createdAt).add(20, 'days').format()])
+  const destinationEndShippingPeriod = destinationStartShippingPeriod === '' ? '' : moment(createdAt).add(20, 'days').add(10, 'hours').format()
+
+  const statusArray = ['En Espera']
 
   const origin = {
     coordinates: getLocation(),
@@ -52,8 +54,9 @@ const Model = () => {
     createdAt,
     origin: {
       coordinates: {
-        lat: origin.coordinates.latitude,
-        lng: origin.coordinates.longitude
+        latitude: origin.coordinates.latitude,
+        longitude: origin.coordinates.longitude,
+        status: 'WAITING'
       },
       address: {
         city: origin.address.city,
@@ -65,8 +68,9 @@ const Model = () => {
     },
     destination: {
       coordinates: {
-        lat: destination.coordinates.latitude,
-        lng: destination.coordinates.longitude
+        latitude: destination.coordinates.latitude,
+        longitude: destination.coordinates.longitude,
+        status: 'WAITING'
       },
       address: {
         city: destination.address.city,
@@ -77,7 +81,9 @@ const Model = () => {
       shippingPeriod: destination.shippingPeriod
     },
     shipment: {
-      type: randomize(shipmentTypes),
+      status: randomize(statusArray),
+      shipmentContentTypes: randomize(shipmentContentTypes),
+      type: "Completa",
       packagingType: randomize(packagingTypes),
       productType: randomize(productTypes),
       truck: {
@@ -90,7 +96,8 @@ const Model = () => {
       bidder: {
         id: numbers.randomBetween(1, 250000),
         name: `${faker.name.firstName()} ${faker.name.lastName()}`,
-        telephone: faker.phone.phoneNumber,
+        telephone: faker.phone.phoneNumber(),
+        email: faker.internet.email(),
         bidValue: numbers.randomBetween(10000, 200000)
       }
     }
