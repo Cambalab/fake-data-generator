@@ -2,7 +2,10 @@
 *
 
 # Keep
-!/constants
-!/lib
+!/constants/**/*
+!/lib/**/*
 !/models/example.json
 !/output/example.json
+!/dist/**/*
+!cli.js
+!main.js
