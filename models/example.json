@@ -1,0 +1,61 @@
+{
+  "config": {
+    "locale": "en"
+  },
+  "model": {
+    "id": {
+      "type": "randomNumberBetween",
+      "value": [1, 2500000]
+    },
+    "title": {
+      "type": "faker",
+      "value": "lorem.words"
+    },
+    "content": {
+      "type": "faker",
+      "value": "lorem.paragraph"
+    },
+    "publicationDate": {
+      "type": "faker",
+      "value": "date.recent"
+    },
+    "author": {
+      "type": "Object",
+      "value": {
+        "firstName": {
+          "type": "faker",
+          "value": "name.firstName"
+        },
+        "lastName": {
+          "type": "faker",
+          "value": "name.lastName"
+        },
+        "address": {
+          "type": "Object",
+          "value": {
+            "street": {
+              "type": "faker",
+              "value": "address.streetAddress"
+            },
+            "city": {
+              "type": "faker",
+              "value": "address.city"
+            },
+            "state": {
+              "type": "faker",
+              "value": "address.state"
+            },
+            "zipCode": {
+              "type": "faker",
+              "value": "address.zipCode"
+            },
+            "country": {
+              "type": "faker",
+              "value": "address.country"
+            }
+          }
+        }
+      }
+    }
+  }
+}
