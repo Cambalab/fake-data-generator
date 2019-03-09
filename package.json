@@ -11,8 +11,7 @@
   "author": "sgobotta",
   "license": "ISC",
   "dependencies": {
-    "faker": "^4.1.0",
-    "moment": "^2.24.0"
+    "faker": "^4.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
