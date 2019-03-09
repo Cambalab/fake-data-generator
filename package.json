@@ -1,6 +1,6 @@
 {
   "name": "fake-data-generator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Just a small script to create fake data files given a JSON model",
   "author": "sgobotta <santiago@camba.coop>",
   "main": "dist/main.js",
