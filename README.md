@@ -1,7 +1,5 @@
 # Fake Data Generator
 
-## Moved to [Cambalab Organization](https://github.com/Cambalab/fake-data-generator)
-
 #### Just a small open-source script to create fake data given a simple JSON model.
 
 ## Introduction
