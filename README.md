@@ -134,4 +134,4 @@ If you feel like contributing or just share an idea for us to improve the script
 
 ---
 
-**With <3 from [Cambá.coop](https://camba.coop), Buenos Aires, Argentina.**
+**With :green_heart::purple_heart::heart: from [Cambá Coop](https://camba.coop), Buenos Aires, Argentina.**
