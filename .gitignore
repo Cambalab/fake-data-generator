@@ -1,6 +1,7 @@
 node_modules
 dist
-output
+output/*
+!output/example.json
 fixtures
 models/*
 !models/example.json
