@@ -12,7 +12,9 @@
 
 ## Installation
 
-*no npm package for now*
+***Install from npm or clone/fork the repository***
+
+### Install as a standalone forked repository
 
 +   **First Clone or fork the repository** (thumbsup for forking :D)
 
@@ -22,7 +24,21 @@
   npm install
 ```
 
+### Install as an npm dependency for your own project
+
+```bash
+  npm install --save-dev fake-data-generator
+```
+
+### Or if you want to use it globally from a terminal
+
+```bash
+  npm install -g fake-data-generator
+```
+
 ## Usage
+
+### Usage from a forked or cloned repository
 
 #### 1. Write a simple JSON model in the models directory
 
@@ -42,14 +58,52 @@
 
 [***Output Example***](/output/example.json)
 
+### Usage as an npm dependency
+
+#### 1. Write a simple JSON model as explained before
+
+#### 2. Use it in your own module
+
+```javascript
+  // Requires the package
+  const { generateModel } = require('fake-data-generator')
+  // Requires a model
+  const model = require('./models/example.json')
+  // Generate the model
+  const amountArg = 50
+  const modelArg = 'example'
+  const outputType = 'object'
+  const generatedModel = generateModel({ amountArg, modelArg, outputType })
+```
+
+#### generateModel function
+
+*   **amountArg:** *the quantity of models to generate*
+*   **modelArg:** *the name of your model in the models directory*
+*   **outputType:** *one of the following:*
+    +   **object:** *Returns a javascript object or array*
+    +   **json:** *Outputs a json file to the output directory*
+
+### Usage as a global npm dependency
+
+#### 1. Create a models and an output directory and write a simple JSON model as explained before
+
+```bash
+  mkdir models
+  mkdir output
+```
+
+#### 2. Run the global npm bin script
+
+```bash
+  fake-data-generator example 10 example.json
+```
+
 ## Models Format
 
 *   **config:** *General configuration*
-
     +   **locale:** *language used for faker.locale*
-
 *   **model:** *This is where you declare the model*
-
     +   **attribute** *an attribute of your model. Example:* ***id***    
         +   **type** *One of* ***"faker", "randomNumberBetween", "Object"***
 
@@ -121,7 +175,7 @@ This is how the script knows we want to nest objects
 {
   "timesIWatchedNicolasCageMovies": {
     "type": "randomNumberBetween",
-    "value": [0, 2587655]
+    "value": [150, 2587655]
   }
 }
 ```
