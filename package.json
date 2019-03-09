@@ -1,7 +1,7 @@
 {
   "name": "fake-data-generator",
   "version": "0.0.0",
-  "description": "",
+  "description": "Just a small script to create fake data files given a JSON model",
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
