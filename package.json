@@ -3,10 +3,11 @@
   "version": "0.1.1",
   "description": "Just a small script to create fake data files given a JSON model",
   "author": "sgobotta <santiago@camba.coop>",
-  "main": "dist/index.js",
+  "main": "dist/main.js",
+  "bin": "dist/cli.js",
   "scripts": {
-    "start": "node dist/index.js",
-    "build": "node_modules/.bin/rimraf dist/ && node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "node dist/cli.js",
+    "build": "node_modules/.bin/rimraf dist/ && node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./npm-debug.log --copy-files",
     "generate": "npm run build && npm start",
     "prepublish": "npm run build",
     "publish": "git push origin --tags && git push origin",
@@ -22,5 +23,17 @@
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "rimraf": "^2.6.3"
+  },
+  "homepage": "https://github.com/Cambalab/fake-data-generator#readme",
+  "keywords": [
+    "faker",
+    "fake-data",
+    "node",
+    "open-source",
+    "script"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cambalab/fake-data-generator.git"
   }
 }
