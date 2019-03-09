@@ -2,14 +2,19 @@
   "name": "fake-data-generator",
   "version": "0.0.0",
   "description": "Just a small script to create fake data files given a JSON model",
-  "main": "index.js",
+  "author": "sgobotta <santiago@camba.coop>",
+  "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
-    "generate": "npm run build && npm start"
+    "build": "node_modules/.bin/rimraf dist/ && node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "generate": "npm run build && npm start",
+    "prepublish": "npm run build",
+    "publish": "git push origin --tags && git push origin",
+    "release:major": "npm version major && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:patch": "npm version patch && npm publish"
   },
-  "author": "sgobotta",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "faker": "^4.1.0"
   },

@@ -1,0 +1,8 @@
+# Ignore everything by default
+*
+
+# Keep
+!/constants
+!/lib
+!/models/example.json
+!/output/example.json
