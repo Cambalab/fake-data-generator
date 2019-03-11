@@ -105,7 +105,9 @@
     +   **locale:** *language used for faker.locale*
 *   **model:** *This is where you declare the model*
     +   **attribute** *an attribute of your model. Example:* ***id***    
-        +   **type** *One of* ***"faker", "randomNumberBetween", "Object"***
+        +   **type** *One of* ***"faker", "randomNumberBetween", "Object", "Array"***
+        +   **value** *A value corresponding to the specified type*
+        +   **options** *configuration options for the specified type. (required by some types)*
 
 #### Types and Values
 
@@ -176,6 +178,52 @@ This is how the script knows we want to nest objects
   "timesIWatchedNicolasCageMovies": {
     "type": "randomNumberBetween",
     "value": [150, 2587655]
+  }
+}
+```
+
+##### Array
+
+Defines an Array of objects to be created with the same type.
+
+**options**
+- `size: Number` How many objects to create. **required**
+
+*Extending the company model a little further:*
+
+```json
+{
+  "company": {    
+    "type": "Object",
+    "value": {
+      "name": {    
+        "type": "faker",
+        "value": "company.companyName"
+      },
+      "addresses": {
+        "type": "Array",
+        "options": {"size": 10},
+        "value": {
+          "address": {
+            "type": "Object",
+            "value": {
+              "street": {
+                "type": "faker",
+                "value": "address.streetAddress"
+              },
+              "city": {
+                "type": "faker",
+                "value": "address.city"
+              },
+              "state": {
+                "type": "faker",
+                "value": "address.state"
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 ```
