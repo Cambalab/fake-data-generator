@@ -204,21 +204,19 @@ Defines an Array of objects to be created with the same type.
         "type": "Array",
         "options": {"size": 10},
         "value": {
-          "address": {
-            "type": "Object",
-            "value": {
-              "street": {
-                "type": "faker",
-                "value": "address.streetAddress"
-              },
-              "city": {
-                "type": "faker",
-                "value": "address.city"
-              },
-              "state": {
-                "type": "faker",
-                "value": "address.state"
-              }
+          "type": "Object",
+          "value": {
+            "street": {
+              "type": "faker",
+              "value": "address.streetAddress"
+            },
+            "city": {
+              "type": "faker",
+              "value": "address.city"
+            },
+            "state": {
+              "type": "faker",
+              "value": "address.state"
             }
           }
         }
