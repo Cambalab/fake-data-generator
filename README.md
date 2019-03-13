@@ -202,7 +202,9 @@ Defines an Array of objects to be created with the same type.
       },
       "addresses": {
         "type": "Array",
-        "options": {"size": 10},
+        "options": {
+          "size": 10
+        },
         "value": {
           "type": "Object",
           "value": {
