@@ -19,6 +19,13 @@
       "type": "faker",
       "value": "date.recent"
     },
+    "publication": {
+      "type": "randomNumberBetweenWithString",
+      "value": [1, 2500000],
+      "options": {
+        "before": "#"
+      }
+    },
     "stats": {
       "type": "Array",
       "options": {
@@ -27,10 +34,16 @@
       "value": {
         "type": "Object",
         "value": {
-          "likes": {"type": "randomNumberBetween", "value": [0, 40]},
-          "dislikes": {"type": "randomNumberBetween", "value": [0, 40]}
+          "likes": {
+            "type": "randomNumberBetween",
+            "value": [0, 40]
+          },
+          "dislikes": {
+            "type": "randomNumberBetween",
+            "value": [0, 40]
+          }
         }
-        }
+      }
     },
     "author": {
       "type": "Object",
