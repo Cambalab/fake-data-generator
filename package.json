@@ -23,6 +23,8 @@
       "eslint:recommended"
     ],
     "globals": {
+      "after": "readonly",
+      "before": "readonly",
       "describe": "readonly",
       "it": "readonly"
     },
