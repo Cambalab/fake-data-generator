@@ -23,9 +23,34 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "eslint": "^5.16.0",
+    "husky": "^1.3.1",
     "rimraf": "^2.6.3"
   },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "parser": "babel-eslint",
+      "sourceType": "module"
+    }
+  },
   "homepage": "https://github.com/Cambalab/fake-data-generator#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": ".githooks/pre-commit"
+    }
+  },
   "keywords": [
     "faker",
     "fake-data",
