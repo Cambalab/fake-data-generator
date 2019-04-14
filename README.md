@@ -236,4 +236,13 @@ If you feel like contributing or just share an idea for us to improve the script
 
 ---
 
-**With :green_heart::purple_heart::heart: from [Cambá Coop](https://camba.coop), Buenos Aires, Argentina.**
+---
+<p align="center">
+  <a href="https://camba.coop" target="_blank" rel="noopener noreferrer">
+    <img width="20" src="http://camba.coop/assets/signature/no_text_logo.png" />
+  </a>
+  <strong>With :green_heart: :purple_heart: :heart: by <a href="https://camba.coop" target="_blank" rel="noopener noreferrer">Cambá Coop</a> :earth_americas: Buenos Aires, Argentina</strong>
+  <a href="https://camba.coop" target="_blank" rel="noopener noreferrer">
+    <img width="20" src="http://camba.coop/assets/signature/no_text_logo.png" />
+  </a>
+</p>
