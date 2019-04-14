@@ -23,7 +23,8 @@
       "type": "randomNumberBetweenWithString",
       "value": [1, 2500000],
       "options": {
-        "before": "#"
+        "prefix": "#",
+        "suffix": "*"
       }
     },
     "stats": {
