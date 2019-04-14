@@ -204,8 +204,8 @@ This is how the script knows we want to nest objects
 *Just another version of randomNumberBetween that accepts a range of numbers, a prefix as a string and a suffix as a string*
 
 ***options:***  
-+   `after: String` a value to be interpolated after the number  
-+   `before: String` a value to be interpolated before the number
++   `prefix: String` a value to be interpolated as the number prefix
++   `suffix: String` a value to be interpolated as the number suffix
 
 ```json
 {
@@ -213,7 +213,8 @@ This is how the script knows we want to nest objects
     "type": "randomNumberBetweenWithString",
     "value": [1, 2500000],
     "options": {
-      "before": "#"
+      "prefix": "#",
+      "suffix": "*"
     }
   }
 }
