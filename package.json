@@ -25,6 +25,24 @@
     "babel-preset-es2015": "^6.24.1",
     "rimraf": "^2.6.3"
   },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "parser": "babel-eslint",
+      "sourceType": "module"
+    }
+  },
   "homepage": "https://github.com/Cambalab/fake-data-generator#readme",
   "keywords": [
     "faker",
