@@ -19,6 +19,24 @@
       "type": "faker",
       "value": "date.recent"
     },
+    "issue": {
+      "type": "prepend",
+      "options": {
+        "text": "#"
+      },
+      "value": {
+        "type": "randomNumberBetween",
+        "value": [1, 2500]
+      }
+    },
+    "fileName": {
+      "type": "append",
+      "options": {"text": ".pdf"},
+      "value": {
+        "type": "faker",
+        "value": "random.words"
+      }
+    },
     "publication": {
       "type": "randomNumberBetweenWithString",
       "value": [1, 2500000],
