@@ -35,6 +35,7 @@
       "value": {
         "type": "faker",
         "value": "random.words"
+      }
     },
     "publication": {
       "type": "randomNumberBetweenWithString",
@@ -42,7 +43,6 @@
       "options": {
         "prefix": "#",
         "suffix": "*"
-
       }
     },
     "stats": {
