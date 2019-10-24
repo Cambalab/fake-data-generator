@@ -3,12 +3,6 @@
 ## [v0.1.7](https://github.com/Cambalab/fake-data-generator/tree/v0.1.7) (2019-10-23)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.6...v0.1.7)
 
-## [v0.1.6](https://github.com/Cambalab/fake-data-generator/tree/v0.1.6) (2019-10-23)
-[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.2.0...v0.1.6)
-
-## [v0.2.0](https://github.com/Cambalab/fake-data-generator/tree/v0.2.0) (2019-10-23)
-[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.5...v0.2.0)
-
 **Implemented enhancements:**
 
 - Add tests with jest [\#19](https://github.com/Cambalab/fake-data-generator/issues/19)
@@ -36,6 +30,11 @@
 - Updates README.md footer with cambá images [\#16](https://github.com/Cambalab/fake-data-generator/pull/16) ([sgobotta](https://github.com/sgobotta))
 - 10 add changelog [\#12](https://github.com/Cambalab/fake-data-generator/pull/12) ([sgobotta](https://github.com/sgobotta))
 - v0.1.15 [\#9](https://github.com/Cambalab/fake-data-generator/pull/9) ([sgobotta](https://github.com/sgobotta))
+
+## [v0.1.6](https://github.com/Cambalab/fake-data-generator/tree/v0.1.6) (2019-10-23)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.2.0...v0.1.6)
+
+**No updates**
 
 ## [v0.1.5](https://github.com/Cambalab/fake-data-generator/tree/v0.1.5) (2019-03-14)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.4...v0.1.5)
