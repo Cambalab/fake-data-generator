@@ -19,6 +19,32 @@
       "type": "faker",
       "value": "date.recent"
     },
+    "issue": {
+      "type": "prepend",
+      "options": {
+        "text": "#"
+      },
+      "value": {
+        "type": "randomNumberBetween",
+        "value": [1, 2500]
+      }
+    },
+    "fileName": {
+      "type": "append",
+      "options": {"text": ".pdf"},
+      "value": {
+        "type": "faker",
+        "value": "random.words"
+      }
+    },
+    "publication": {
+      "type": "randomNumberBetweenWithString",
+      "value": [1, 2500000],
+      "options": {
+        "prefix": "#",
+        "suffix": "*"
+      }
+    },
     "stats": {
       "type": "Array",
       "options": {
@@ -27,10 +53,16 @@
       "value": {
         "type": "Object",
         "value": {
-          "likes": {"type": "randomNumberBetween", "value": [0, 40]},
-          "dislikes": {"type": "randomNumberBetween", "value": [0, 40]}
+          "likes": {
+            "type": "randomNumberBetween",
+            "value": [0, 40]
+          },
+          "dislikes": {
+            "type": "randomNumberBetween",
+            "value": [0, 40]
+          }
         }
-        }
+      }
     },
     "author": {
       "type": "Object",
