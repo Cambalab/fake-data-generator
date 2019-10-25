@@ -15,9 +15,14 @@
       "type": "faker",
       "value": "lorem.paragraph"
     },
-    "publicationDate": {
+    "updatedAt": {
       "type": "faker",
       "value": "date.recent"
+    },
+    "publicationDate": {
+      "type": "faker",
+      "value": "date.between",
+      "options": ["2019-01-02", "2019-12-29"]
     },
     "issue": {
       "type": "prepend",
