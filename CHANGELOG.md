@@ -1,7 +1,39 @@
 # Change Log
 
+## [Unreleased](https://github.com/Cambalab/fake-data-generator/tree/HEAD)
+
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.8...HEAD)
+
+**Implemented enhancements:**
+
+- As a User I want to define an inputType to be able to use different kind of models [\#32](https://github.com/Cambalab/fake-data-generator/issues/32)
+- Remove the config constant [\#30](https://github.com/Cambalab/fake-data-generator/issues/30)
+- Add support for faker date between [\#27](https://github.com/Cambalab/fake-data-generator/issues/27)
+- 32 as a user i want to define an input type to be able to use different kind of models [\#33](https://github.com/Cambalab/fake-data-generator/pull/33) ([sgobotta](https://github.com/sgobotta))
+
+**Merged pull requests:**
+
+- Removes constants config file [\#31](https://github.com/Cambalab/fake-data-generator/pull/31) ([sgobotta](https://github.com/sgobotta))
+
+## [v0.1.8](https://github.com/Cambalab/fake-data-generator/tree/v0.1.8) (2019-10-25)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.7...v0.1.8)
+
+**Implemented enhancements:**
+
+- 27 add support for faker date between [\#28](https://github.com/Cambalab/fake-data-generator/pull/28) ([sgobotta](https://github.com/sgobotta))
+
+**Merged pull requests:**
+
+- 0.1.7 [\#26](https://github.com/Cambalab/fake-data-generator/pull/26) ([sgobotta](https://github.com/sgobotta))
+
 ## [v0.1.7](https://github.com/Cambalab/fake-data-generator/tree/v0.1.7) (2019-10-23)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.6...v0.1.7)
+
+## [v0.1.6](https://github.com/Cambalab/fake-data-generator/tree/v0.1.6) (2019-10-23)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.2.0...v0.1.6)
+
+## [v0.2.0](https://github.com/Cambalab/fake-data-generator/tree/v0.2.0) (2019-10-23)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.5...v0.2.0)
 
 **Implemented enhancements:**
 
@@ -30,11 +62,6 @@
 - Updates README.md footer with cambá images [\#16](https://github.com/Cambalab/fake-data-generator/pull/16) ([sgobotta](https://github.com/sgobotta))
 - 10 add changelog [\#12](https://github.com/Cambalab/fake-data-generator/pull/12) ([sgobotta](https://github.com/sgobotta))
 - v0.1.15 [\#9](https://github.com/Cambalab/fake-data-generator/pull/9) ([sgobotta](https://github.com/sgobotta))
-
-## [v0.1.6](https://github.com/Cambalab/fake-data-generator/tree/v0.1.6) (2019-10-23)
-[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.2.0...v0.1.6)
-
-**No updates**
 
 ## [v0.1.5](https://github.com/Cambalab/fake-data-generator/tree/v0.1.5) (2019-03-14)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.4...v0.1.5)
