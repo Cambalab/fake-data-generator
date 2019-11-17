@@ -22,7 +22,13 @@ example:
 }
 
 if (argv.length === 5) {
-  generateModel({ amountArg, fileName, modelArg, outputType: 'json' })
+  generateModel({
+    amountArg,
+    fileName,
+    modelArg,
+    inputType: 'json',
+    outputType: 'json'
+  })
 } else {
   printUsage()
 }
