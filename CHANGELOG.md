@@ -1,5 +1,20 @@
 # Change Log
 
+## [v0.1.9](https://github.com/Cambalab/fake-data-generator/tree/HEAD)
+
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.8...HEAD)
+
+**Implemented enhancements:**
+
+- As a User I want to define an inputType to be able to use different kind of models [\#32](https://github.com/Cambalab/fake-data-generator/issues/32)
+- Remove the config constant [\#30](https://github.com/Cambalab/fake-data-generator/issues/30)
+- Add support for faker date between [\#27](https://github.com/Cambalab/fake-data-generator/issues/27)
+- 32 as a user i want to define an input type to be able to use different kind of models [\#33](https://github.com/Cambalab/fake-data-generator/pull/33) ([sgobotta](https://github.com/sgobotta))
+
+**Merged pull requests:**
+
+- Removes constants config file [\#31](https://github.com/Cambalab/fake-data-generator/pull/31) ([sgobotta](https://github.com/sgobotta))
+
 ## [v0.1.8](https://github.com/Cambalab/fake-data-generator/tree/v0.1.8) (2019-10-25)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.7...v0.1.8)
 
