@@ -60,9 +60,33 @@
 
 ### Usage as an npm dependency
 
-#### 1. Write a simple JSON model as explained before
+#### 1. Write a simple model as explained before, as a JSON or as a Javascript Object
 
 #### 2. Use it in your own module
+
+**amountArg:**
++   **Type:** `Number`
++   **Description:** describes how many elements should be created from a given model
++   **Required**
+
+**modelArg:**
++   **Type:** `Object | Json file`
++   **Description:** when **inputType** param is `json`, **modelArg** behaves as a file path to that json file. For `object` **inputType** values, **modelArg** behaves like a javascript object, where the model should be defined.
++   **Required**
+
+**fileName:**
++   **Type:** `String`
++   **Description** when **inputType** is `json` **fileName** will describe the output path where the file will be writen to.
+
+**inputType:**
++   **Type:** `String`
++   **Options:** `object | json`
++   **Description:** describes the kind of input the generator will receive and read the model from.
+
+**outputType:**
++   **Type:** `String`
++   **Options:** `object | json`
++   **Description:** describes the kind of output the generator will write or return. 
 
 ```javascript
   // Requires the package
@@ -71,18 +95,13 @@
   const model = require('./models/example.json')
   // Generate the model
   const amountArg = 50
-  const modelArg = 'example'
+  const modelArg = model
+  const inputType = 'object'
   const outputType = 'object'
-  const generatedModel = generateModel({ amountArg, modelArg, outputType })
+  const generatedModel = generateModel({ amountArg, modelArg, inputType, outputType })
 ```
+> Note that using **required** or **import** on a `.json` file, the returned value behaves like a javascript Object.
 
-#### generateModel function
-
-*   **amountArg:** *the quantity of models to generate*
-*   **modelArg:** *the name of your model in the models directory*
-*   **outputType:** *one of the following:*
-    +   **object:** *Returns a javascript object or array*
-    +   **json:** *Outputs a json file to the output directory*
 
 ### Usage as a global npm dependency
 
