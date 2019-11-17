@@ -1,6 +1,6 @@
 # Change Log
 
-## [Unreleased](https://github.com/Cambalab/fake-data-generator/tree/HEAD)
+## [v0.1.9](https://github.com/Cambalab/fake-data-generator/tree/HEAD)
 
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.8...HEAD)
 
