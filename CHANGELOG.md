@@ -1,8 +1,14 @@
 # Change Log
 
-## [v0.1.9](https://github.com/Cambalab/fake-data-generator/tree/HEAD)
+## [v0.1.10](https://github.com/Cambalab/fake-data-generator/tree/v0.1.10) (2019-11-17)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.9...v0.1.10)
 
-[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.8...HEAD)
+**Merged pull requests:**
+
+- 0.1.9 [\#34](https://github.com/Cambalab/fake-data-generator/pull/34) ([sgobotta](https://github.com/sgobotta))
+
+## [v0.1.9](https://github.com/Cambalab/fake-data-generator/tree/v0.1.9) (2019-11-17)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.8...v0.1.9)
 
 **Implemented enhancements:**
 
@@ -14,6 +20,7 @@
 **Merged pull requests:**
 
 - Removes constants config file [\#31](https://github.com/Cambalab/fake-data-generator/pull/31) ([sgobotta](https://github.com/sgobotta))
+- 0.1.8 [\#29](https://github.com/Cambalab/fake-data-generator/pull/29) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.8](https://github.com/Cambalab/fake-data-generator/tree/v0.1.8) (2019-10-25)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.7...v0.1.8)
