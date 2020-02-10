@@ -278,7 +278,7 @@ Defines an Array of objects to be created with the same type.
 
 ***options***
 +   `size: Number` How many objects to create. **required - is mutually exclusive with size: Array**
-+   `size: Array`  A two value array where the first value is the minimum nuber of entries and the second is the maximum **required - is mutually exclusive with size: Number**
++   `size: Array`  A two value array where the first value is the minimum number of entries and the second is the maximum **required - is mutually exclusive with size: Number**
 
 *Extending the company model a little further:*
 
