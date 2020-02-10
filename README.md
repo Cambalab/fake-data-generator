@@ -160,6 +160,22 @@ Any other faker method can be used in the **value** attribute like this:
 
 # <Divider>
 
+##### String
+
+This is simply a pass-through for those occasions when a known value is desired
+
+`value: String`
+
+```json
+{
+  "company": {    
+    "type": "String",
+    "value": "Microsoft"
+  }
+}
+```
+# <Divider>
+
 ##### Object
 
 This is how the script knows we want to nest objects
@@ -218,6 +234,21 @@ This is how the script knows we want to nest objects
 }
 ```
 
+###### randomElementInArray
+
+*The script provides a simple way to get a random element from an array of options.*
+
+`value: Array` a list of options to pick from.
+
+```json
+{
+  "whichDisneyMovieToWatchTonight": {
+    "type": "randomElementInArray",
+    "value": ["Frozen", "Mulan", "The Lion King", "Aladdin"]
+  }
+}
+```
+
 ###### randomNumberBetweenWithString
 
 *Just another version of randomNumberBetween that accepts a range of numbers, a prefix as a string and a suffix as a string*
@@ -246,10 +277,12 @@ This is how the script knows we want to nest objects
 Defines an Array of objects to be created with the same type.
 
 ***options***
-+   `size: Number` How many objects to create. **required**
++   `size: Number` How many objects to create. **required - is mutually exclusive with size: Array**
++   `size: Array`  A two value array where the first value is the minimum nuber of entries and the second is the maximum **required - is mutually exclusive with size: Number**
 
 *Extending the company model a little further:*
 
+__as a Number__
 ```json
 {
   "company": {    
@@ -286,6 +319,43 @@ Defines an Array of objects to be created with the same type.
   }
 }
 ```
+
+__as an Array__
+```json
+{
+  "company": {    
+    "type": "Object",
+    "value": {
+      "name": {    
+        "type": "faker",
+        "value": "company.companyName"
+      },
+      "addresses": {
+        "type": "Array",
+        "options": {
+          "size": [5, 20]
+        },
+        "value": {
+          "type": "Object",
+          "value": {
+            "street": {
+              "type": "faker",
+              "value": "address.streetAddress"
+            },
+            "city": {
+              "type": "faker",
+              "value": "address.city"
+            },
+            "state": {
+              "type": "faker",
+              "value": "address.state"
+            }
+          }
+        }
+      }
+    }
+  }
+}```
 
 ##### Concatenate
 
