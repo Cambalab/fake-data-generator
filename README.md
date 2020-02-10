@@ -355,7 +355,8 @@ __as an Array__
       }
     }
   }
-}```
+}
+```
 
 ##### Concatenate
 
