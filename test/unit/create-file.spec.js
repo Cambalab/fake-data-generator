@@ -1,7 +1,7 @@
 import fs from 'fs'
 import { expect } from 'chai'
-import { createFile } from '../lib/create-file'
-import exampleData from '../models/example.json'
+import { createFile } from '../../lib/create-file'
+import exampleData from '../../models/example.json'
 
 describe('Create File', () => {
   const fileName = 'example-test.json'

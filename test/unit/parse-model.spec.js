@@ -2,8 +2,8 @@
 import chai from 'chai'
 chai.use(require('chai-string'));
 import { expect } from 'chai'
-import { parseArray, parseString, parseModel, append, prepend } from '../lib/parse-model'
-import parseModelData from '../lib/parse-model'
+import { parseArray, parseString, parseModel, append, prepend } from '../../lib/parse-model'
+import parseModelData from '../../lib/parse-model'
 
 describe('ParseModel', () => {
 
