@@ -15,4 +15,5 @@ install:
 before_script:
   - npm i
 script:
-  - npm run test:unit
+  - npm run build
+  - npm run test:coverage && ./node_modules/.bin/codecov
