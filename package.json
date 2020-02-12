@@ -67,7 +67,7 @@
     "build": "node_modules/.bin/rimraf dist/ && node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./npm-debug.log --copy-files",
     "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updates changelog\"",
     "generate": "npm run build && npm start",
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "publish": "git push origin --tags && npm run changelog && git push origin",
     "release:major": "npm version major && npm publish",
     "release:minor": "npm version minor && npm publish",
