@@ -1,10 +1,28 @@
 # Fake Data Generator
 
-#### Just a small open-source script to create fake data given a simple JSON model.
+<h4 align="center">Just a small open-source script to create fake data given a simple JSON model.</h4>
+
+<p align="center">
+  <a href="https://travis-ci.com/Cambalab/fake-data-generator">
+    <img src="https://travis-ci.com/Cambalab/fake-data-generator.svg?branch=develop" alt="Build Status">
+  </a>
+  <a href="https://codecov.io/gh/Cambalab/fake-data-generator">
+    <img src="https://codecov.io/gh/Cambalab/fake-data-generator/branch/develop/graph/badge.svg" />
+    </a>
+  <a href="https://www.npmjs.com/package/fake-data-generator">
+    <img src="https://img.shields.io/npm/v/fake-data-generator.svg" alt="Npm version">
+  </a>
+  <a href="https://github.com/Cambalab/fake-data-generator/blob/master/LICENSE">
+    <img src="https://img.shields.io/npm/l/fake-data-generator.svg" alt="License">
+  </a>
+  <a href="https://github.com/Cambalab/fake-data-generator/blob/master/.github/CODE_OF_CONDUCT.md">
+    <img src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg" alt="License">
+  </a>
+</p>
 
 ## Introduction
 
-***This is a tiny package motivated by the development of a real-world frontend project where we needed to generate tons of fake data while the backend was being built. We started implementing and editing a single .js file with specific characteristics of the backend models and the desired amount we wanted to generate until we ended up with something like this. We personally decided to use the output files in the API endpoints of a testing server but you could use them any way you like, they're just JSON files :)***
+This is a tiny package motivated by the development of other frontend project where we needed to generate tons of fake data while a backend was being built. We started implementing and editing a single `.js` file with specific characteristics of the backend models and the desired amount we wanted to generate until we ended up with something like this. We personally decided to use the output files in the API endpoints of a test server but you could use them any way you like, they're just `.json` files.
 
 ## Dependencies
 
@@ -12,55 +30,56 @@
 
 ## Installation
 
-***Install from npm or clone/fork the repository***
+There are a few ways you can get this library installed:
 
-### Install as a standalone forked repository
-
-+   **First Clone or fork the repository** (thumbsup for forking :D)
-
-+   **Install dependencies**
++   Install as a standalone forked repository
 
 ```bash
-  npm install
+# clone our project or fork your own
+git clone https://github.com/Cambalab/fake-data-generator.git
+# install dependencies
+npm install
 ```
 
-### Install as an npm dependency for your own project
++   Install as an npm dependency for your own project
 
 ```bash
-  npm install --save-dev fake-data-generator
+# install it as a dependency or dev-dependency of our own project
+npm install --save-dev fake-data-generator
 ```
 
-### Or if you want to use it globally from a terminal
++   Use it globally from a terminal
 
 ```bash
-  npm install -g fake-data-generator
+# install it globally
+npm install -g fake-data-generator
 ```
 
 ## Usage
 
 ### Usage from a forked or cloned repository
 
-#### 1. Write a simple JSON model in the models directory
+#### 1. Write a `.json` model in the `models` directory
 
 [***Article Example***](/models/example.json)
 
 #### 2. Run the generate script from a terminal
 
-***Writes a .json file with an array of 50 articles to the output directory where:***
+*The following command writes a .json file with an array of 50 elements to the output directory, where:*
 
-+   **1st param** ***(example):*** is the name of your model.json
-+   **2nd param** ***(10):*** the numbers of models to generate
-+   **3rd param** ***(example.json):*** the name of the output file
++   **1st param** `example`: is the name of your `model.json` file.
++   **2nd param** `10`: the numbers of models to generate.
++   **3rd param** `example.json`: the name of the output file.
 
 ```bash
-  npm run generate example 10 example.json
+npm run generate example 50 example.json
 ```
 
 [***Output Example***](/output/example.json)
 
 ### Usage as an npm dependency
 
-#### 1. Write a simple model as explained before, as a JSON or as a Javascript Object
+#### 1. Write a simple model as explained before. It can be a `.json` file or a javascript `Object`
 
 #### 2. Use it in your own module
 
@@ -89,48 +108,48 @@
 +   **Description:** describes the kind of output the generator will write or return. 
 
 ```javascript
-  // Requires the package
-  const { generateModel } = require('fake-data-generator')
-  // Requires a model
-  const model = require('./models/example.json')
-  // Generate the model
-  const amountArg = 50
-  const modelArg = model
-  const inputType = 'object'
-  const outputType = 'object'
-  const generatedModel = generateModel({ amountArg, modelArg, inputType, outputType })
+// Requires the package
+const { generateModel } = require('fake-data-generator')
+// Requires a model
+const model = require('./models/example.json')
+// Generate the model
+const amountArg = 50
+const modelArg = model
+const inputType = 'object'
+const outputType = 'object'
+const generatedModel = generateModel({ amountArg, modelArg, inputType, outputType })
 ```
-> Note that using **required** or **import** on a `.json` file, the returned value behaves like a javascript Object.
+> Note that when using `required` or `import` on a `.json` file the returned value behaves like a javascript Object.
 
 
 ### Usage as a global npm dependency
 
-#### 1. Create a models and an output directory and write a simple JSON model as explained before
+#### 1. Create a `models` directory, an `output` directory and write a `.json` model as explained before
 
 ```bash
-  mkdir models
-  mkdir output
+mkdir models
+mkdir output
 ```
 
 #### 2. Run the global npm bin script
 
 ```bash
-  fake-data-generator example 10 example.json
+fake-data-generator example 10 example.json
 ```
 
 ## Models Format
 
-*   **config:** *General configuration*
-    +   **locale:** *language used for faker.locale*
-*   **model:** *This is where you declare the model*
-    +   **attribute** *an attribute of your model. Example:* ***id***    
-        +   **type** *One of* ***"faker", "randomNumberBetween", "Object", "Array"***
-        +   **value** *A value corresponding to the specified type*
-        +   **options** *configuration options for the specified type. (required by some types)*
+*   **config:** *general configuration.*
+    +   **locale:** *language used for `faker.locale`*.
+*   **model:** *this is where you declare the model.*
+    +   **attribute** *an attribute of your model. Example:* ***`id`***
+        +   **type** *one of* ***`faker`, `randomNumberBetween`, `Object`, `Array`***.
+        +   **value** *a value corresponding to the specified type*.
+        +   **options** *configuration options for the specified type (required by some types)*.
 
 # <Divider>
 
-#### Types and Values
+### Types and Values
 
 A valid format would be an object with the following keys:  
 +   **type**
@@ -139,11 +158,11 @@ A valid format would be an object with the following keys:
 
 # <Divider>
 
-##### faker
+#### faker
 
-*Currently the script supports faker methods that return Date, String or Number data only. It's not ready to handle faker methods that receive arguments* ***yet.***
+Currently the script supports faker methods that return `Date`, `String` or `Number` data only. It's not ready to handle faker methods that receive arguments ***yet.***
 
-If you're not familiar with **faker**, take a look at their [**docs**](https://www.npmjs.com/package/faker#api-methods), it's really simple to use.
+If you're not familiar with `faker`, take a look at their [**docs**](https://www.npmjs.com/package/faker#api-methods), it's really simple to use.
 
 Any other faker method can be used in the **value** attribute like this:
 
@@ -160,7 +179,7 @@ Any other faker method can be used in the **value** attribute like this:
 
 # <Divider>
 
-##### String
+#### String
 
 This is simply a pass-through for those occasions when a known value is desired
 
@@ -176,7 +195,7 @@ This is simply a pass-through for those occasions when a known value is desired
 ```
 # <Divider>
 
-##### Object
+#### Object
 
 This is how the script knows we want to nest objects
 
@@ -217,9 +236,9 @@ This is how the script knows we want to nest objects
 
 # <Divider>
 
-##### Numbers
+#### Numbers
 
-###### randomNumberBetween
+##### randomNumberBetween
 
 *The script provides a simple way to get a random number between a range of numbers*
 
@@ -234,7 +253,7 @@ This is how the script knows we want to nest objects
 }
 ```
 
-###### randomElementInArray
+##### randomElementInArray
 
 *The script provides a simple way to get a random element from an array of options.*
 
@@ -249,7 +268,7 @@ This is how the script knows we want to nest objects
 }
 ```
 
-###### randomNumberBetweenWithString
+##### randomNumberBetweenWithString
 
 *Just another version of randomNumberBetween that accepts a range of numbers, a prefix as a string and a suffix as a string*
 
@@ -272,13 +291,13 @@ This is how the script knows we want to nest objects
 
 # <Divider>
 
-##### Array
+#### Array
 
-Defines an Array of objects to be created with the same type.
+Defines an `Array` of elements to be created with the same type.
 
 ***options***
-+   `size: Number` How many objects to create. **required - is mutually exclusive with size: Array**
-+   `size: Array`  A two value array where the first value is the minimum number of entries and the second is the maximum **required - is mutually exclusive with size: Number**
++   `size: Number` How many objects to create. **Required, is mutually exclusive with size: `Array`**
++   `size: Array`  A two value array where the first value is the minimum number of entries and the second is the maximum. **Required, is mutually exclusive with size: `Number`**
 
 *Extending the company model a little further:*
 
@@ -362,7 +381,7 @@ __as an Array__
 
 ###### prepend
 
-Adds a fixed string in front of another dynamic value generated by one of the other datatypes
+Adds a fixed `String` in front of another dynamic value generated by one of the other datatypes.
 
 ***options***
   - `text: String` The text to be prepended. **required**
@@ -382,7 +401,7 @@ Adds a fixed string in front of another dynamic value generated by one of the ot
 
 ###### append
 
-Adds a fixed string at the back of another dynamic value generated by one of the other datatypes
+Adds a fixed `String` at the back of another dynamic value generated by one of the other datatypes.
 
 ***options***
   - `text: String` The text to be appended. **required**
@@ -400,11 +419,15 @@ Adds a fixed string at the back of another dynamic value generated by one of the
 }
 ```
 
-## Contributing and Future features
+## Contribution
 
-We plan to keep improving this script. We'd at least like to give support to all faker methods and *(why not?)* for any other fake data module from npm.
+Please make sure to read the [**Contributing Guide**](https://github.com/Cambalab/vue-admin/blob/master/.github/CONTRIBUTING.md) before making a pull request.
 
-If you feel like contributing or just share an idea for us to improve the script usage, please do not hesitate to open an issue with the **nice to have** label.
+> We plan to keep improving this script. We'd at least like to give support to all faker methods and *(why not?)* to any other fake data module from npm.
+
+## License
+
+[**GNU General Public License version 3**](https://github.com/Cambalab/vue-admin/blob/master/LICENSE)
 
 # <Divider>
 
