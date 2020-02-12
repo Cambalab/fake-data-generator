@@ -1,5 +1,29 @@
 # Change Log
 
+## [v0.2.1](https://github.com/Cambalab/fake-data-generator/tree/v0.2.1) (2020-02-12)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.10...v0.2.1)
+
+**Implemented enhancements:**
+
+- Update documentation with new features information [\#50](https://github.com/Cambalab/fake-data-generator/issues/50)
+- 50 update documentation with new features information [\#51](https://github.com/Cambalab/fake-data-generator/pull/51) ([sgobotta](https://github.com/sgobotta))
+- 48 setup test coverage [\#49](https://github.com/Cambalab/fake-data-generator/pull/49) ([sgobotta](https://github.com/sgobotta))
+- 46 set up ci with build and tests [\#47](https://github.com/Cambalab/fake-data-generator/pull/47) ([sgobotta](https://github.com/sgobotta))
+
+**Closed issues:**
+
+- Consider running npm audit to remove dependencies vulnerabilities [\#44](https://github.com/Cambalab/fake-data-generator/issues/44)
+
+**Merged pull requests:**
+
+- 44 consider running npm audit to remove dependencies vulnerabilities [\#45](https://github.com/Cambalab/fake-data-generator/pull/45) ([sgobotta](https://github.com/sgobotta))
+- Bump lodash from 4.17.11 to 4.17.15 [\#43](https://github.com/Cambalab/fake-data-generator/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump mixin-deep from 1.3.1 to 1.3.2 [\#42](https://github.com/Cambalab/fake-data-generator/pull/42) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump eslint-utils from 1.3.1 to 1.4.3 [\#41](https://github.com/Cambalab/fake-data-generator/pull/41) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Unit tests [\#38](https://github.com/Cambalab/fake-data-generator/pull/38) ([anthonydeaver](https://github.com/anthonydeaver))
+- Feature updates [\#36](https://github.com/Cambalab/fake-data-generator/pull/36) ([anthonydeaver](https://github.com/anthonydeaver))
+- 0.1.10 [\#35](https://github.com/Cambalab/fake-data-generator/pull/35) ([sgobotta](https://github.com/sgobotta))
+
 ## [v0.1.10](https://github.com/Cambalab/fake-data-generator/tree/v0.1.10) (2019-11-17)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.9...v0.1.10)
 
