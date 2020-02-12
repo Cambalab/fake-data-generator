@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { numbers } from '../../lib/helpers'
+import { numbers } from '../../../lib/helpers'
 
 describe('Numbers', () => {
 
