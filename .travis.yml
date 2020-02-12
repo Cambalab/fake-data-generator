@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - "10.15.3"
+addons:
+  apt:
+    packages:
+      # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
+      - libgconf-2-4
+cache:
+  # Caches $HOME/.npm when npm ci is default script command
+  # Caches node_modules in all other cases
+  npm: true
+install:
+  - npm ci
+before_script:
+  - npm i
+script:
+  - npm run build
+  - npm run test:coverage && ./node_modules/.bin/codecov

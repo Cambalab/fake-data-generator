@@ -1,7 +1,15 @@
+# dependencies
 node_modules
+
+# build
 dist
+
+# input/output files
 output/*
 !output/example.json
-fixtures
 models/*
 !models/example.json
+
+# test
+test/**/coverage
+.nyc_output

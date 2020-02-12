@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { numbers } from '../../lib/helpers'
+import { numbers } from '../../../lib/helpers'
 
 describe('Numbers', () => {
 
@@ -16,6 +16,15 @@ describe('Numbers', () => {
     expect(randomNumber).to.be.a('number')
     expect(randomNumber).to.be.within(from, to)
   })
+
+  it('randomArray - returns a a random value from an array', () => {
+    const { randomArray } = numbers
+    const arr = ['One','Two','Three','Four]']
+    const element = randomArray(arr)
+
+    expect(arr).to.include(element);
+  })
+
 
   it('randomBetweenWithString - returns a number between 1 and 2500000 with prefix \'#\' and suffix \'*\'', () => {
     const { randomBetweenWithString } = numbers

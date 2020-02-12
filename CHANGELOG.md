@@ -1,5 +1,44 @@
 # Change Log
 
+## [v0.3.0](https://github.com/Cambalab/fake-data-generator/tree/v0.3.0) (2020-02-12)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.2.1...v0.3.0)
+
+**Implemented enhancements:**
+
+- Setup test coverage [\#48](https://github.com/Cambalab/fake-data-generator/issues/48)
+- Set up CI with build and tests [\#46](https://github.com/Cambalab/fake-data-generator/issues/46)
+- Implement a function that returns a known value [\#40](https://github.com/Cambalab/fake-data-generator/issues/40)
+- Implement a random element in array [\#39](https://github.com/Cambalab/fake-data-generator/issues/39)
+- Extend randomNumberBetweenWithString to use an Array as size [\#37](https://github.com/Cambalab/fake-data-generator/issues/37)
+
+**Closed issues:**
+
+- Implement tests for the parse-model module [\#21](https://github.com/Cambalab/fake-data-generator/issues/21)
+
+## [v0.2.1](https://github.com/Cambalab/fake-data-generator/tree/v0.2.1) (2020-02-12)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.10...v0.2.1)
+
+**Implemented enhancements:**
+
+- Update documentation with new features information [\#50](https://github.com/Cambalab/fake-data-generator/issues/50)
+- 50 update documentation with new features information [\#51](https://github.com/Cambalab/fake-data-generator/pull/51) ([sgobotta](https://github.com/sgobotta))
+- 48 setup test coverage [\#49](https://github.com/Cambalab/fake-data-generator/pull/49) ([sgobotta](https://github.com/sgobotta))
+- 46 set up ci with build and tests [\#47](https://github.com/Cambalab/fake-data-generator/pull/47) ([sgobotta](https://github.com/sgobotta))
+
+**Closed issues:**
+
+- Consider running npm audit to remove dependencies vulnerabilities [\#44](https://github.com/Cambalab/fake-data-generator/issues/44)
+
+**Merged pull requests:**
+
+- 44 consider running npm audit to remove dependencies vulnerabilities [\#45](https://github.com/Cambalab/fake-data-generator/pull/45) ([sgobotta](https://github.com/sgobotta))
+- Bump lodash from 4.17.11 to 4.17.15 [\#43](https://github.com/Cambalab/fake-data-generator/pull/43) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump mixin-deep from 1.3.1 to 1.3.2 [\#42](https://github.com/Cambalab/fake-data-generator/pull/42) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump eslint-utils from 1.3.1 to 1.4.3 [\#41](https://github.com/Cambalab/fake-data-generator/pull/41) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Unit tests [\#38](https://github.com/Cambalab/fake-data-generator/pull/38) ([anthonydeaver](https://github.com/anthonydeaver))
+- Feature updates [\#36](https://github.com/Cambalab/fake-data-generator/pull/36) ([anthonydeaver](https://github.com/anthonydeaver))
+- 0.1.10 [\#35](https://github.com/Cambalab/fake-data-generator/pull/35) ([sgobotta](https://github.com/sgobotta))
+
 ## [v0.1.10](https://github.com/Cambalab/fake-data-generator/tree/v0.1.10) (2019-11-17)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.9...v0.1.10)
 
@@ -69,13 +108,13 @@
 - Updates README.md footer with cambá images [\#16](https://github.com/Cambalab/fake-data-generator/pull/16) ([sgobotta](https://github.com/sgobotta))
 - 10 add changelog [\#12](https://github.com/Cambalab/fake-data-generator/pull/12) ([sgobotta](https://github.com/sgobotta))
 - v0.1.15 [\#9](https://github.com/Cambalab/fake-data-generator/pull/9) ([sgobotta](https://github.com/sgobotta))
+- Develop [\#8](https://github.com/Cambalab/fake-data-generator/pull/8) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.5](https://github.com/Cambalab/fake-data-generator/tree/v0.1.5) (2019-03-14)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.4...v0.1.5)
 
 **Merged pull requests:**
 
-- Develop [\#8](https://github.com/Cambalab/fake-data-generator/pull/8) ([sgobotta](https://github.com/sgobotta))
 - Add Array type support for recursive goodness [\#7](https://github.com/Cambalab/fake-data-generator/pull/7) ([glmaljkovich](https://github.com/glmaljkovich))
 - Release 0.1.4 [\#6](https://github.com/Cambalab/fake-data-generator/pull/6) ([sgobotta](https://github.com/sgobotta))
 
