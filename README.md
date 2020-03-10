@@ -179,20 +179,32 @@ Any other faker method can be used in the **value** attribute like this:
 
 # <Divider>
 
-#### String
+#### Literal
 
-This is simply a pass-through for those occasions when a known value is desired
+This is simply a pass-through for those occasions when a known value is desired.
 
-`value: String`
+`value: any`
 
+Case with a `String`
 ```json
 {
-  "company": {    
-    "type": "String",
-    "value": "Microsoft"
+  "operating_system": {    
+    "type": "Literal",
+    "value": "Linux"
   }
 }
 ```
+
+Case using an `Array` of elements
+```json
+{
+  "resources": {    
+    "type": "Literal",
+    "value": ["memory", "disk", "network", "cpu"]
+  }
+}
+```
+
 # <Divider>
 
 #### Object
