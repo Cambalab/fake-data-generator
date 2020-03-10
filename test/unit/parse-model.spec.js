@@ -2,7 +2,7 @@
 import chai from 'chai'
 chai.use(require('chai-string'));
 import { expect } from 'chai'
-import { parseArray, parseString, parseModel, append, prepend } from '../../lib/parse-model'
+import { parseArray, parseLiteral, parseModel, append, prepend } from '../../lib/parse-model'
 import parseModelData from '../../lib/parse-model'
 
 describe('ParseModel', () => {
@@ -52,14 +52,14 @@ describe('ParseModel', () => {
     expect(result).to.startsWith(options.text);
   })
 
-  it('String - acts as a simple passthrough and returns what was passed in', () => {
+  it('Literal - acts as a simple passthrough and returns what was passed in', () => {
     const model = "Banana"
-    const result = parseString(model)
+    const result = parseLiteral(model)
     expect(result).to.eql(model);
   })
 
-  it('String with complex model - should return with unstringified object reference', () => {
-    const model = { type: 'String', value: 'catacombs' }
+  it('Literal with complex model - should return with unstringified object reference', () => {
+    const model = { type: 'Literal', value: 'catacombs' }
     const str = '[object Object]'
     const result = String(model)
     expect(result).to.not.be.a('object')
@@ -70,16 +70,16 @@ describe('ParseModel', () => {
 
   // Mix-n-Match
   describe('Ensuring everything plays nice together', () => {
-    it('prepend with String - should return "Grapefruit".', () => {
-      const model = { type: 'String', value: 'fruit' }
+    it('prepend with Literal - should return "Grapefruit".', () => {
+      const model = { type: 'Literal', value: 'fruit' }
       const options = { text: 'Grape' }
       const result = prepend(model, options)
       expect(result).to.eql('Grapefruit');
       expect(result).to.startsWith(options.text);
     })
 
-    it('append with String - should return "Grapefruit.txt".', () => {
-      const model = { type: 'String', value: 'Grapefruit' }
+    it('append with Literal - should return "Grapefruit.txt".', () => {
+      const model = { type: 'Literal', value: 'Grapefruit' }
       const options = { text: '.txt' }
       const result = append(model, options)
       expect(result).to.eql('Grapefruit.txt');
