@@ -68,6 +68,21 @@ describe('ParseModel', () => {
     expect(result === JSON.stringify(model)).to.be.false
   })
 
+  it('incrementNumber - returns an incremented Number', () => {
+    const model = {
+      model: {
+        brownies: {
+          type: 'incrementNumber',
+          options: {
+            from: 200
+          }
+        }
+      }
+    }
+    const result = parseModelData(model, { index: 220, amount: 1 })
+    expect(result).to.deep.include({ brownies: 420 })
+  })
+
   // Mix-n-Match
   describe('Ensuring everything plays nice together', () => {
     it('prepend with Literal - should return "Grapefruit".', () => {

@@ -301,6 +301,42 @@ This is how the script knows we want to nest objects
 }
 ```
 
+##### incrementNumber
+
+*You can get incremental numbers based on the given amount for a model*
+
+> The `value` attribute is ignored
+
+***options:***
++   `from: Number` starts incrementing from a given number
+
+```json
+{
+  "brownies": {
+    "type": "incrementNumber",
+    "options": {
+      "from": 420
+    }
+  }
+}
+```
+
+*Output using an amount of 3:*
+
+```json
+[
+  {
+    "brownies": 420
+  },
+  {
+    "brownies": 421
+  },
+  {
+    "brownies": 422
+  },
+]
+```
+
 # <Divider>
 
 #### Array
