@@ -22,11 +22,11 @@
 
 ## Introduction
 
-This is a tiny package motivated by the development of other frontend project where we needed to generate tons of fake data while a backend was being built. We started implementing and editing a single `.js` file with specific characteristics of the backend models and the desired amount we wanted to generate until we ended up with something like this. We personally decided to use the output files in the API endpoints of a test server but you could use them any way you like, they're just `.json` files.
+This is a tiny package motivated by the need of generating certain amount of fake data to populate backend fixtures. We started implementing and editing a single `.js` file with specific characteristics of some backend models and the desired amount we wanted to generate until we ended up with something like this. We personally decided to use the output files in the API endpoints of a test server but you could use them any way you like, they're just `.json` files.
 
-## Dependencies
+## Built-In Dependencies
 
-+   **[Faker](https://www.npmjs.com/package/faker)**: we take advantage of the Faker API to create fake data
++   **[Faker](https://www.npmjs.com/package/faker)**: we use the Faker API to create fake data
 
 ## Installation
 
@@ -139,11 +139,33 @@ fake-data-generator example 10 example.json
 
 ## Models Format
 
-*   **config:** *general configuration.*
-    +   **locale:** *language used for `faker.locale`*.
-*   **model:** *this is where you declare the model.*
-    +   **attribute** *an attribute of your model. Example:* ***`id`***
-        +   **type** *one of* ***`faker`, `randomNumberBetween`, `Object`, `Array`***.
+### config
+
++   **Type:** *(optional)* `Object`
+
++   **Details:** general configuration.
+
++   **Properties:**
+    +   **locale:** *language used for `faker.locale`.*
+
+### amount
+
++   **Type:** *(optional)* `Number`
+
++   **Details:** an amount of objects to generate.
+
+> ***When this value is present, the amount value given from a cli or the generateModel function from the npm package is overwritten.***
+    
+
+### model
+
++   **Type:** `Object`
+
++   **Details:** A declaration of your object model
+
++   **Properties:**
+    +   **attributeName** *an attribute of your model. Example:* ***`id`***
+        +   **type** *one of fake-data-generator types. Example:* ***`faker`, `randomNumberBetween`, `Object`, `Array`***.
         +   **value** *a value corresponding to the specified type*.
         +   **options** *configuration options for the specified type (required by some types)*.
 
