@@ -82,10 +82,7 @@ describe('Numbers', () => {
 
   it('randomBetweenWithString - returns a number between 1 and 2500000 with no prefix and no suffix', () => {
     const { randomBetweenWithString } = numbers
-    const randomNumberWithString = randomBetweenWithString(
-      [from, to],
-      { suffix: options.suffix }
-    )
+    const randomNumberWithString = randomBetweenWithString([from, to])
     const {
       prefix,
       suffix,

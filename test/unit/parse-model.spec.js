@@ -2,7 +2,7 @@
 import chai from 'chai'
 chai.use(require('chai-string'));
 import { expect } from 'chai'
-import { parseArray, parseLiteral, parseModel, append, prepend } from '../../lib/parse-model'
+import { parseArray, parseLiteral, parseModel, parseString, append, prepend } from '../../lib/parse-model'
 import parseModelData from '../../lib/parse-model'
 
 describe('ParseModel', () => {
@@ -50,6 +50,12 @@ describe('ParseModel', () => {
     const options = { text: '#' }
     const result = prepend(model, options)
     expect(result).to.startsWith(options.text);
+  })
+
+  it('String - acts as a simple passthrough and returns what was passed in', () => {
+    const model = "Banana"
+    const result = parseString(model)
+    expect(result).to.eql(model);
   })
 
   it('Literal - acts as a simple passthrough and returns what was passed in', () => {
