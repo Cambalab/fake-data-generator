@@ -2,7 +2,7 @@
 import chai from 'chai'
 chai.use(require('chai-string'));
 import { expect } from 'chai'
-import { parseArray, parseString, parseModel, append, prepend } from '../../lib/parse-model'
+import { parseArray, parseLiteral, parseModel, parseString, append, prepend } from '../../lib/parse-model'
 import parseModelData from '../../lib/parse-model'
 
 describe('ParseModel', () => {
@@ -58,8 +58,14 @@ describe('ParseModel', () => {
     expect(result).to.eql(model);
   })
 
-  it('String with complex model - should return with unstringified object reference', () => {
-    const model = { type: 'String', value: 'catacombs' }
+  it('Literal - acts as a simple passthrough and returns what was passed in', () => {
+    const model = "Banana"
+    const result = parseLiteral(model)
+    expect(result).to.eql(model);
+  })
+
+  it('Literal with complex model - should return with unstringified object reference', () => {
+    const model = { type: 'Literal', value: 'catacombs' }
     const str = '[object Object]'
     const result = String(model)
     expect(result).to.not.be.a('object')
@@ -68,18 +74,33 @@ describe('ParseModel', () => {
     expect(result === JSON.stringify(model)).to.be.false
   })
 
+  it('incrementNumber - returns an incremented Number', () => {
+    const model = {
+      model: {
+        brownies: {
+          type: 'incrementNumber',
+          options: {
+            from: 200
+          }
+        }
+      }
+    }
+    const result = parseModelData(model, { index: 220, amount: 1 })
+    expect(result).to.deep.include({ brownies: 420 })
+  })
+
   // Mix-n-Match
   describe('Ensuring everything plays nice together', () => {
-    it('prepend with String - should return "Grapefruit".', () => {
-      const model = { type: 'String', value: 'fruit' }
+    it('prepend with Literal - should return "Grapefruit".', () => {
+      const model = { type: 'Literal', value: 'fruit' }
       const options = { text: 'Grape' }
       const result = prepend(model, options)
       expect(result).to.eql('Grapefruit');
       expect(result).to.startsWith(options.text);
     })
 
-    it('append with String - should return "Grapefruit.txt".', () => {
-      const model = { type: 'String', value: 'Grapefruit' }
+    it('append with Literal - should return "Grapefruit.txt".', () => {
+      const model = { type: 'Literal', value: 'Grapefruit' }
       const options = { text: '.txt' }
       const result = append(model, options)
       expect(result).to.eql('Grapefruit.txt');

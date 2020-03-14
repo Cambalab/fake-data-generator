@@ -86,4 +86,4 @@ The test:unit script will run the unit tests. **Please make sure to have this pa
 
 This Contributing Guidelines were adapted from the [Vue.js Contributing Guide][vue-js-contributing-guide].
 
-[vue-js-contributing-guide]: https://www.contributor-covenant.org
+[vue-js-contributing-guide]: https://github.com/vuejs/vue/blob/dev/.github/CONTRIBUTING.md

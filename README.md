@@ -22,11 +22,11 @@
 
 ## Introduction
 
-This is a tiny package motivated by the development of other frontend project where we needed to generate tons of fake data while a backend was being built. We started implementing and editing a single `.js` file with specific characteristics of the backend models and the desired amount we wanted to generate until we ended up with something like this. We personally decided to use the output files in the API endpoints of a test server but you could use them any way you like, they're just `.json` files.
+This is a tiny package motivated by the need of generating certain amount of fake data to populate backend fixtures. We started implementing and editing a single `.js` file with specific characteristics of some backend models and the desired amount we wanted to generate until we ended up with something like this. We personally decided to use the output files in the API endpoints of a test server but you could use them any way you like, they're just `.json` files.
 
-## Dependencies
+## Built-In Dependencies
 
-+   **[Faker](https://www.npmjs.com/package/faker)**: we take advantage of the Faker API to create fake data
++   **[Faker](https://www.npmjs.com/package/faker)**: we use the Faker API to create fake data
 
 ## Installation
 
@@ -139,11 +139,33 @@ fake-data-generator example 10 example.json
 
 ## Models Format
 
-*   **config:** *general configuration.*
-    +   **locale:** *language used for `faker.locale`*.
-*   **model:** *this is where you declare the model.*
-    +   **attribute** *an attribute of your model. Example:* ***`id`***
-        +   **type** *one of* ***`faker`, `randomNumberBetween`, `Object`, `Array`***.
+### config
+
++   **Type:** *(optional)* `Object`
+
++   **Details:** general configuration.
+
++   **Properties:**
+    +   **locale:** *language used for `faker.locale`.*
+
+### amount
+
++   **Type:** *(optional)* `Number`
+
++   **Details:** an amount of objects to generate.
+
+> ***When this value is present, the amount value given from a cli or the generateModel function from the npm package is overwritten.***
+    
+
+### model
+
++   **Type:** `Object`
+
++   **Details:** A declaration of your object model
+
++   **Properties:**
+    +   **attributeName** *an attribute of your model. Example:* ***`id`***
+        +   **type** *one of fake-data-generator types. Example:* ***`faker`, `randomNumberBetween`, `Object`, `Array`***.
         +   **value** *a value corresponding to the specified type*.
         +   **options** *configuration options for the specified type (required by some types)*.
 
@@ -179,20 +201,32 @@ Any other faker method can be used in the **value** attribute like this:
 
 # <Divider>
 
-#### String
+#### Literal
 
-This is simply a pass-through for those occasions when a known value is desired
+This is simply a pass-through for those occasions when a known value is desired.
 
-`value: String`
+`value: any`
 
+Case with a `String`
 ```json
 {
-  "company": {    
-    "type": "String",
-    "value": "Microsoft"
+  "operating_system": {    
+    "type": "Literal",
+    "value": "Linux"
   }
 }
 ```
+
+Case using an `Array` of elements
+```json
+{
+  "resources": {    
+    "type": "Literal",
+    "value": ["memory", "disk", "network", "cpu"]
+  }
+}
+```
+
 # <Divider>
 
 #### Object
@@ -287,6 +321,42 @@ This is how the script knows we want to nest objects
     }
   }
 }
+```
+
+##### incrementNumber
+
+*You can get incremental numbers based on the given amount for a model*
+
+> The `value` attribute is ignored
+
+***options:***
++   `from: Number` starts incrementing from a given number
+
+```json
+{
+  "brownies": {
+    "type": "incrementNumber",
+    "options": {
+      "from": 420
+    }
+  }
+}
+```
+
+*Output using an amount of 3:*
+
+```json
+[
+  {
+    "brownies": 420
+  },
+  {
+    "brownies": 421
+  },
+  {
+    "brownies": 422
+  },
+]
 ```
 
 # <Divider>

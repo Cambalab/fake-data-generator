@@ -1,5 +1,25 @@
 # Change Log
 
+## [v0.3.1](https://github.com/Cambalab/fake-data-generator/tree/HEAD)
+
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.3.0...HEAD)
+
+**Implemented enhancements:**
+
+- Improves test coverage [\#60](https://github.com/Cambalab/fake-data-generator/issues/60)
+- Implement an incrementNumber function [\#56](https://github.com/Cambalab/fake-data-generator/issues/56)
+- Propagate options through the parsing process [\#55](https://github.com/Cambalab/fake-data-generator/issues/55)
+- Rename String structure type to Literal [\#53](https://github.com/Cambalab/fake-data-generator/issues/53)
+
+**Merged pull requests:**
+
+- 60 improves test coverage [\#61](https://github.com/Cambalab/fake-data-generator/pull/61) ([sgobotta](https://github.com/sgobotta))
+- Bump acorn from 6.1.1 to 6.4.1 [\#59](https://github.com/Cambalab/fake-data-generator/pull/59) ([dependabot[bot]](https://github.com/apps/dependabot))
+- 56 implement an increment number function [\#58](https://github.com/Cambalab/fake-data-generator/pull/58) ([sgobotta](https://github.com/sgobotta))
+- 55 propagate options through the parsing process [\#57](https://github.com/Cambalab/fake-data-generator/pull/57) ([sgobotta](https://github.com/sgobotta))
+- 53 rename string structure type to literal [\#54](https://github.com/Cambalab/fake-data-generator/pull/54) ([sgobotta](https://github.com/sgobotta))
+- Release v0.3.0 [\#52](https://github.com/Cambalab/fake-data-generator/pull/52) ([sgobotta](https://github.com/sgobotta))
+
 ## [v0.3.0](https://github.com/Cambalab/fake-data-generator/tree/v0.3.0) (2020-02-12)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.2.1...v0.3.0)
 
@@ -108,13 +128,13 @@
 - Updates README.md footer with cambá images [\#16](https://github.com/Cambalab/fake-data-generator/pull/16) ([sgobotta](https://github.com/sgobotta))
 - 10 add changelog [\#12](https://github.com/Cambalab/fake-data-generator/pull/12) ([sgobotta](https://github.com/sgobotta))
 - v0.1.15 [\#9](https://github.com/Cambalab/fake-data-generator/pull/9) ([sgobotta](https://github.com/sgobotta))
-- Develop [\#8](https://github.com/Cambalab/fake-data-generator/pull/8) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.5](https://github.com/Cambalab/fake-data-generator/tree/v0.1.5) (2019-03-14)
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.4...v0.1.5)
 
 **Merged pull requests:**
 
+- Develop [\#8](https://github.com/Cambalab/fake-data-generator/pull/8) ([sgobotta](https://github.com/sgobotta))
 - Add Array type support for recursive goodness [\#7](https://github.com/Cambalab/fake-data-generator/pull/7) ([glmaljkovich](https://github.com/glmaljkovich))
 - Release 0.1.4 [\#6](https://github.com/Cambalab/fake-data-generator/pull/6) ([sgobotta](https://github.com/sgobotta))
 
