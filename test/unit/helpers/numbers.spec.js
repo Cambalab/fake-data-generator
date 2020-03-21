@@ -17,14 +17,22 @@ describe('Numbers', () => {
     expect(randomNumber).to.be.within(from, to)
   })
 
-  it('randomArray - returns a a random value from an array', () => {
-    const { randomArray } = numbers
+  it('randomElementInArray - returns a random value from an array', () => {
+    const { randomElementInArray } = numbers
     const arr = ['One','Two','Three','Four]']
-    const element = randomArray(arr)
+    const element = randomElementInArray(arr)
 
     expect(arr).to.include(element);
   })
 
+  it('randomElementsInArray - returns a random subgroup from an array', () => {
+    const { randomElementsInArray } = numbers
+    const arr = ['One','Two','Three','Four]']
+    const elements = randomElementsInArray(arr)
+
+    expect(elements).to.be.an('array').that.is.not.empty;
+    // expect(arr).to.include(element);
+  })
 
   it('randomBetweenWithString - returns a number between 1 and 2500000 with prefix \'#\' and suffix \'*\'', () => {
     const { randomBetweenWithString } = numbers
