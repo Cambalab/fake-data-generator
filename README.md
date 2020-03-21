@@ -295,10 +295,39 @@ This is how the script knows we want to nest objects
 
 ```json
 {
-  "whichDisneyMovieToWatchTonight": {
+  "whichMovieToWatchTonight": {
     "type": "randomElementInArray",
-    "value": ["Frozen", "Mulan", "The Lion King", "Aladdin"]
+    "value": ["Frozen", "Mulan", "The Lion King", "Aladdin", "Pulp Fiction"]
   }
+}
+```
+
+*output*
+```json
+{
+  "whichMovieToWatchTonight": "Pulp Fiction"
+}
+```
+
+##### randomElementsInArray
+
+*This one returns a random group of elements from an array of options.*
+
+`value: Array` a list of options to pick from.
+
+```json
+{
+  "whichMoviesToWatchTonight": {
+    "type": "randomElementsInArray",
+    "value": ["Frozen", "Mulan", "The Lion King", "Aladdin", "Pulp Fiction"]
+  }
+}
+```
+
+*output*
+```json
+{
+  "whichMoviesToWatchTonight": ["Pulp Fiction", "Aladdin"]
 }
 ```
 

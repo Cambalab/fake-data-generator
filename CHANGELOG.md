@@ -1,8 +1,19 @@
 # Change Log
 
-## [v0.3.1](https://github.com/Cambalab/fake-data-generator/tree/HEAD)
+## [v0.4.0](https://github.com/Cambalab/fake-data-generator/tree/v0.4.0) (2020-03-21)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.3.1...v0.4.0)
 
-[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.3.0...HEAD)
+**Implemented enhancements:**
+
+- As a user i want to get a subgroup of arrays from given options [\#63](https://github.com/Cambalab/fake-data-generator/issues/63)
+
+**Merged pull requests:**
+
+- 63 as a user i want to get a subgroup of arrays from given options [\#64](https://github.com/Cambalab/fake-data-generator/pull/64) ([sgobotta](https://github.com/sgobotta))
+- 0.3.1 [\#62](https://github.com/Cambalab/fake-data-generator/pull/62) ([sgobotta](https://github.com/sgobotta))
+
+## [v0.3.1](https://github.com/Cambalab/fake-data-generator/tree/v0.3.1) (2020-03-14)
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.3.0...v0.3.1)
 
 **Implemented enhancements:**
 
