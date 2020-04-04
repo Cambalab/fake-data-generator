@@ -22,12 +22,28 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: echo show me that app name
-    - run: echo this is the app name $DOKKU_APP_NAME
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm run test:coverage && ./node_modules/.bin/codecov -t $CODECOV_TOKEN
+    - run: npm run test:coverage
+    - run: ./node_modules/.bin/codecov -t $CODECOV_TOKEN
+      env:
+        CI: true
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+  deploy:
+    needs: [build]
+    runs-on: ubuntu-latest
+    name: A job for dokku deployment
+
+    steps:
+    - run: mkdir -p ~/.ssh
+    - run: echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+    - run: chmod 600 ~/.ssh/id_rsa
+    - run: ssh-keyscan -H '$DOKKU_HOST_NAME' >> ~/.ssh/known_hosts
+    - run: git push -f $DOKKU_USER_NAME@$DOKKU_HOST_NAME:$DOKKU_APP_NAME $GITHUB_REF:$DOKKU_TARGET_BRANCH
       env:
         CI: true
         DOKKU_APP_NAME: ${{ secrets.DOKKU_APP_NAME }}
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        DOKKU_HOST_NAME: ${{ secrets.DOKKU_HOST_NAME }}
+        DOKKU_TARGET_BRANCH: ${{ secrets.DOKKU_TARGET_BRANCH }}
+        DOKKU_USER_NAME: ${{ secrets.DOKKU_USER_NAME }}
