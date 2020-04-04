@@ -41,7 +41,7 @@ jobs:
     - run: echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
     - run: chmod 600 ~/.ssh/id_rsa
     - run: ssh-keyscan -H '$DOKKU_HOST_NAME' >> ~/.ssh/known_hosts
-    - run: git push -f $DOKKU_USER_NAME@$DOKKU_HOST_NAME:$DOKKU_APP_NAME $GITHUB_REF:$DOKKU_TARGET_BRANCH
+    - run: git push -f ${{ DOKKU_USER_NAME }}@${{ DOKKU_HOST_NAME }}:${{ DOKKU_APP_NAME }} staging-website:${{ DOKKU_TARGET_BRANCH }}
       env:
         CI: true
         DOKKU_APP_NAME: ${{ secrets.DOKKU_APP_NAME }}
