@@ -36,6 +36,7 @@ jobs:
     name: A job for dokku deployment
 
     steps:
+    - uses: actions/checkout@v2
     - run: mkdir -p ~/.ssh
     - run: echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
     - run: chmod 600 ~/.ssh/id_rsa
