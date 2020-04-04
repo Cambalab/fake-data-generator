@@ -31,20 +31,14 @@ jobs:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   deploy:
-    needs: [build]
     runs-on: ubuntu-latest
-    name: A job for dokku deployment
 
     steps:
-    - uses: actions/checkout@v2
-    - run: mkdir -p ~/.ssh
-    - run: echo "$SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
-    - run: chmod 600 ~/.ssh/id_rsa
-    - run: ssh-keyscan -H '$DOKKU_HOST_NAME' >> ~/.ssh/known_hosts
-    - run: git push -f ${{ env.DOKKU_USER_NAME }}@${{ env.DOKKU_HOST_NAME }}:${{ env.DOKKU_APP_NAME }} staging-website:${{ env.DOKKU_TARGET_BRANCH }}
+    - uses: actions/checkout@v1
+    - name: Dokku deploy
+      uses: vitalyliber/dokku-github-action@v3.0
       env:
-        CI: true
-        DOKKU_APP_NAME: ${{ secrets.DOKKU_APP_NAME }}
-        DOKKU_HOST_NAME: ${{ secrets.DOKKU_HOST_NAME }}
-        DOKKU_TARGET_BRANCH: ${{ secrets.DOKKU_TARGET_BRANCH }}
-        DOKKU_USER_NAME: ${{ secrets.DOKKU_USER_NAME }}
+        PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        PUBLIC_KEY: ${{ secrets.SSH_PUBLIC_KEY }}
+        HOST: ${{ secrets.DOKKU_HOST_NAME }}
+        PROJECT: ${{ secrets.DOKKU_APP_NAME }}
