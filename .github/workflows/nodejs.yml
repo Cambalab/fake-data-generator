@@ -22,8 +22,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: echo "show me that app name"
-    - run: echo $DOKKU_APP_NAME
+    - run: echo show me that app name
+    - run: echo this is the app name $DOKKU_APP_NAME
     - run: npm ci
     - run: npm run build --if-present
     - run: npm run test:coverage && ./node_modules/.bin/codecov -t $CODECOV_TOKEN
