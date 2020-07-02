@@ -3,6 +3,7 @@
   "bin": "dist/cli.js",
   "description": "Just a small script to create fake data files given a JSON model",
   "dependencies": {
+    "ajv": "^6.12.1",
     "babel-core": "^6.26.3",
     "faker": "^4.1.0"
   },
