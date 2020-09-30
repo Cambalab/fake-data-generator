@@ -13,7 +13,7 @@
       },
       "type": {
         "type": "Literal",
-        "value": "lalala"
+        "value": "Im just a String"
       },
       "timesClicked": {
         "type": "randomNumberBetween",
