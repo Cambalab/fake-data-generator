@@ -110,6 +110,16 @@ Then run the proper release script.
 npm run release:<type>
 ```
 
+### Drafting a release
+
+The last step is to draft the release in the Github repository. Go to the [New release section](https://github.com/Cambalab/fake-data-generator/releases/new). Then we'll fill the form inputs one by one.
+
++ Tag version: all our tags are named `vx.x.x`. Example: `v0.4.1`.
++ Release title: `Release vx.x.x` Example: `Release v0.4.1`.
++ Release description: to complete this field we use the previously generated changelog. Pick the first section of the document, starting like `## [vx.x.x](https://github.com/Cambalab/fake-data-generator/tree/vx.x.x) (2020-03-21)`. We just want to include details related with our recent version release in the current draft. You can take a look at a [previous draft](https://github.com/Cambalab/fake-data-generator/releases) to get an example.
++ Use the **Preview** tab to check that the output description looks fine.
++ Click the **Publish release** button.
+
 After the release is done, we open a PR from the `$VERSION` branch to the `master` branch and update the `develop` branch with the new version.
 
 > *In the future we'd likely want to do this automatically and add a CI pipeline that triggers tests before releasig a given version type (major, minor, patch)*.
