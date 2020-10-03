@@ -82,6 +82,38 @@ The test:unit script will run the unit tests. **Please make sure to have this pa
 
   +   **`helpers`**: utility functions shared by the main source code.
 
+## Release
+
+There are scripts available to publish npm releases: `release:major`, `release:minor`, `release:patch`. Each of them run a build, create tags, generates a changelog, commit changes and pushes everything to github.
+
+### Pre-requisites
+
+The changelog is generated using the [dockerized version](https://github.com/github-changelog-generator/docker-github-changelog-generator) of the [github changelog generator](https://github.com/github-changelog-generator/github-changelog-generator) ruby program. Docker is a pre-requisite to run this script. You'll also have to provide an auth token to run this program. This can be easily done by exporting the next from your `.bashrc`, `.zshrc` or whatever runtime configuration file you use. Remember to run `source <your-runtime-configuration-file>` after declaring the auth token.
+
+```bash
+export CHANGELOG_GITHUB_TOKEN="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+
+### Releasing a version
+
+Releases are performed from the `develop` branch. When `develop` is in sync with the remote repository, the workspace is clean, and you're ready to release, checkout a new branch with the new version name.
+
+```bash
+VERSION=x.x.x
+git checkout -b $VERSION
+git push --set-upstream origin $VERSION
+```
+
+Then run the proper release script.
+
+```bash
+npm run release:<type>
+```
+
+After the release is done, we open a PR from the `$VERSION` branch to the `master` branch and update the `develop` branch with the new version.
+
+> *In the future we'd likely want to do this automatically and add a CI pipeline that triggers tests before releasig a given version type (major, minor, patch)*.
+
 ## Attribution
 
 This Contributing Guidelines were adapted from the [Vue.js Contributing Guide][vue-js-contributing-guide].
