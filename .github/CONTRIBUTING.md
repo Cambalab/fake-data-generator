@@ -96,12 +96,12 @@ export CHANGELOG_GITHUB_TOKEN="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 ### Releasing a version
 
-When your workspace is clean and you're ready to release, checkout a new branch with the new version name.
+Releases are performed from the `develop` branch. When `develop` is in sync with the remote repository, the workspace is clean, and you're ready to release, checkout a new branch with the new version name.
 
 ```bash
 VERSION=x.x.x
 git checkout -b $VERSION
-git push origin $VERSION
+git push --set-upstream origin $VERSION
 ```
 
 Then run the proper release script.
