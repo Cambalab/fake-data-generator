@@ -1,6 +1,25 @@
-# Change Log
+# Changelog
+
+## [v0.4.1](https://github.com/Cambalab/fake-data-generator/tree/v0.4.1) (2020-10-03)
+
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.4.0...v0.4.1)
+
+**Merged pull requests:**
+
+- Dockerized changelog generation [\#72](https://github.com/Cambalab/fake-data-generator/pull/72) ([sgobotta](https://github.com/sgobotta))
+- Parse model refactor [\#70](https://github.com/Cambalab/fake-data-generator/pull/70) ([sgobotta](https://github.com/sgobotta))
+- Bump node-fetch from 2.6.0 to 2.6.1 [\#69](https://github.com/Cambalab/fake-data-generator/pull/69) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump codecov from 3.6.5 to 3.7.1 [\#68](https://github.com/Cambalab/fake-data-generator/pull/68) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump lodash from 4.17.15 to 4.17.19 [\#67](https://github.com/Cambalab/fake-data-generator/pull/67) ([dependabot[bot]](https://github.com/apps/dependabot))
+- 0.4.0 [\#65](https://github.com/Cambalab/fake-data-generator/pull/65) ([sgobotta](https://github.com/sgobotta))
+- 0.3.1 [\#62](https://github.com/Cambalab/fake-data-generator/pull/62) ([sgobotta](https://github.com/sgobotta))
+- Bump acorn from 6.1.1 to 6.4.1 [\#59](https://github.com/Cambalab/fake-data-generator/pull/59) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Release v0.3.0 [\#52](https://github.com/Cambalab/fake-data-generator/pull/52) ([sgobotta](https://github.com/sgobotta))
+- 0.1.10 [\#35](https://github.com/Cambalab/fake-data-generator/pull/35) ([sgobotta](https://github.com/sgobotta))
+- 0.1.9 [\#34](https://github.com/Cambalab/fake-data-generator/pull/34) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.4.0](https://github.com/Cambalab/fake-data-generator/tree/v0.4.0) (2020-03-21)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.3.1...v0.4.0)
 
 **Implemented enhancements:**
@@ -10,9 +29,9 @@
 **Merged pull requests:**
 
 - 63 as a user i want to get a subgroup of arrays from given options [\#64](https://github.com/Cambalab/fake-data-generator/pull/64) ([sgobotta](https://github.com/sgobotta))
-- 0.3.1 [\#62](https://github.com/Cambalab/fake-data-generator/pull/62) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.3.1](https://github.com/Cambalab/fake-data-generator/tree/v0.3.1) (2020-03-14)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.3.0...v0.3.1)
 
 **Implemented enhancements:**
@@ -25,13 +44,12 @@
 **Merged pull requests:**
 
 - 60 improves test coverage [\#61](https://github.com/Cambalab/fake-data-generator/pull/61) ([sgobotta](https://github.com/sgobotta))
-- Bump acorn from 6.1.1 to 6.4.1 [\#59](https://github.com/Cambalab/fake-data-generator/pull/59) ([dependabot[bot]](https://github.com/apps/dependabot))
 - 56 implement an increment number function [\#58](https://github.com/Cambalab/fake-data-generator/pull/58) ([sgobotta](https://github.com/sgobotta))
 - 55 propagate options through the parsing process [\#57](https://github.com/Cambalab/fake-data-generator/pull/57) ([sgobotta](https://github.com/sgobotta))
 - 53 rename string structure type to literal [\#54](https://github.com/Cambalab/fake-data-generator/pull/54) ([sgobotta](https://github.com/sgobotta))
-- Release v0.3.0 [\#52](https://github.com/Cambalab/fake-data-generator/pull/52) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.3.0](https://github.com/Cambalab/fake-data-generator/tree/v0.3.0) (2020-02-12)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.2.1...v0.3.0)
 
 **Implemented enhancements:**
@@ -47,6 +65,7 @@
 - Implement tests for the parse-model module [\#21](https://github.com/Cambalab/fake-data-generator/issues/21)
 
 ## [v0.2.1](https://github.com/Cambalab/fake-data-generator/tree/v0.2.1) (2020-02-12)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.10...v0.2.1)
 
 **Implemented enhancements:**
@@ -68,16 +87,24 @@
 - Bump eslint-utils from 1.3.1 to 1.4.3 [\#41](https://github.com/Cambalab/fake-data-generator/pull/41) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Unit tests [\#38](https://github.com/Cambalab/fake-data-generator/pull/38) ([anthonydeaver](https://github.com/anthonydeaver))
 - Feature updates [\#36](https://github.com/Cambalab/fake-data-generator/pull/36) ([anthonydeaver](https://github.com/anthonydeaver))
-- 0.1.10 [\#35](https://github.com/Cambalab/fake-data-generator/pull/35) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.10](https://github.com/Cambalab/fake-data-generator/tree/v0.1.10) (2019-11-17)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.9...v0.1.10)
+
+**Implemented enhancements:**
+
+- 32 as a user i want to define an input type to be able to use different kind of models [\#33](https://github.com/Cambalab/fake-data-generator/pull/33) ([sgobotta](https://github.com/sgobotta))
+- 27 add support for faker date between [\#28](https://github.com/Cambalab/fake-data-generator/pull/28) ([sgobotta](https://github.com/sgobotta))
 
 **Merged pull requests:**
 
-- 0.1.9 [\#34](https://github.com/Cambalab/fake-data-generator/pull/34) ([sgobotta](https://github.com/sgobotta))
+- Removes constants config file [\#31](https://github.com/Cambalab/fake-data-generator/pull/31) ([sgobotta](https://github.com/sgobotta))
+- 0.1.8 [\#29](https://github.com/Cambalab/fake-data-generator/pull/29) ([sgobotta](https://github.com/sgobotta))
+- 0.1.7 [\#26](https://github.com/Cambalab/fake-data-generator/pull/26) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.9](https://github.com/Cambalab/fake-data-generator/tree/v0.1.9) (2019-11-17)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.8...v0.1.9)
 
 **Implemented enhancements:**
@@ -85,31 +112,21 @@
 - As a User I want to define an inputType to be able to use different kind of models [\#32](https://github.com/Cambalab/fake-data-generator/issues/32)
 - Remove the config constant [\#30](https://github.com/Cambalab/fake-data-generator/issues/30)
 - Add support for faker date between [\#27](https://github.com/Cambalab/fake-data-generator/issues/27)
-- 32 as a user i want to define an input type to be able to use different kind of models [\#33](https://github.com/Cambalab/fake-data-generator/pull/33) ([sgobotta](https://github.com/sgobotta))
-
-**Merged pull requests:**
-
-- Removes constants config file [\#31](https://github.com/Cambalab/fake-data-generator/pull/31) ([sgobotta](https://github.com/sgobotta))
-- 0.1.8 [\#29](https://github.com/Cambalab/fake-data-generator/pull/29) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.8](https://github.com/Cambalab/fake-data-generator/tree/v0.1.8) (2019-10-25)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.7...v0.1.8)
 
-**Implemented enhancements:**
-
-- 27 add support for faker date between [\#28](https://github.com/Cambalab/fake-data-generator/pull/28) ([sgobotta](https://github.com/sgobotta))
-
-**Merged pull requests:**
-
-- 0.1.7 [\#26](https://github.com/Cambalab/fake-data-generator/pull/26) ([sgobotta](https://github.com/sgobotta))
-
 ## [v0.1.7](https://github.com/Cambalab/fake-data-generator/tree/v0.1.7) (2019-10-23)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.6...v0.1.7)
 
 ## [v0.1.6](https://github.com/Cambalab/fake-data-generator/tree/v0.1.6) (2019-10-23)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.2.0...v0.1.6)
 
 ## [v0.2.0](https://github.com/Cambalab/fake-data-generator/tree/v0.2.0) (2019-10-23)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.5...v0.2.0)
 
 **Implemented enhancements:**
@@ -141,6 +158,7 @@
 - v0.1.15 [\#9](https://github.com/Cambalab/fake-data-generator/pull/9) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.5](https://github.com/Cambalab/fake-data-generator/tree/v0.1.5) (2019-03-14)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.4...v0.1.5)
 
 **Merged pull requests:**
@@ -150,12 +168,15 @@
 - Release 0.1.4 [\#6](https://github.com/Cambalab/fake-data-generator/pull/6) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.4](https://github.com/Cambalab/fake-data-generator/tree/v0.1.4) (2019-03-09)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.3...v0.1.4)
 
 ## [v0.1.3](https://github.com/Cambalab/fake-data-generator/tree/v0.1.3) (2019-03-09)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.2...v0.1.3)
 
 ## [v0.1.2](https://github.com/Cambalab/fake-data-generator/tree/v0.1.2) (2019-03-09)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.1...v0.1.2)
 
 **Merged pull requests:**
@@ -164,6 +185,7 @@
 - Release 0.1.1 [\#3](https://github.com/Cambalab/fake-data-generator/pull/3) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.1](https://github.com/Cambalab/fake-data-generator/tree/v0.1.1) (2019-03-09)
+
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.1.0...v0.1.1)
 
 **Merged pull requests:**
@@ -171,10 +193,13 @@
 - Release 0.1.0 [\#2](https://github.com/Cambalab/fake-data-generator/pull/2) ([sgobotta](https://github.com/sgobotta))
 
 ## [v0.1.0](https://github.com/Cambalab/fake-data-generator/tree/v0.1.0) (2019-03-09)
+
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/0ef840c2d2524e72e6a90f3907f820f4d094e103...v0.1.0)
+
 **Merged pull requests:**
 
 - Create LICENSE [\#1](https://github.com/Cambalab/fake-data-generator/pull/1) ([sgobotta](https://github.com/sgobotta))
 
 
 
-\* *This Change Log was automatically generated by [github_changelog_generator](https://github.com/skywinder/Github-Changelog-Generator)*
+\* *This Changelog was automatically generated by [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator)*
