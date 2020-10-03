@@ -65,7 +65,8 @@
   "scripts": {
     "start": "node dist/cli.js",
     "build": "node_modules/.bin/rimraf dist/ && node_modules/.bin/babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./npm-debug.log --copy-files",
-    "changelog": "github_changelog_generator && git add CHANGELOG.md && git commit -am \"Updates changelog\"",
+    "changelog": "npm run docker:changelog && git add CHANGELOG.md && git commit -am \"Updates changelog\"",
+    "docker:changelog": "docker run --env CHANGELOG_GITHUB_TOKEN=$CHANGELOG_GITHUB_TOKEN -it --rm -v $(pwd):/usr/local/src/your-app ferrarimarco/github-changelog-generator --user Cambalab --project fake-data-generator",
     "generate": "npm run build && npm start",
     "prepare": "npm run build",
     "publish": "git push origin --tags && npm run changelog && git push origin",
