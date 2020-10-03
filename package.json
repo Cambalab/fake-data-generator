@@ -73,6 +73,7 @@
     "release:major": "npm version major && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:patch": "npm version patch && npm publish",
+    "test": "npm run test:unit && npm run test:coverage",
     "test:unit": "./node_modules/.bin/mocha --require babel-core/register -R spec ./test/unit/**",
     "test:coverage": "./node_modules/.bin/nyc --reporter=lcov --include=**/lib/**/*.js --exclude=**/*.spec.js --report-dir=./test/unit/coverage npm run test:unit"
   },
