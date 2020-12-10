@@ -4,7 +4,7 @@
   "description": "Just a small script to create fake data files given a JSON model",
   "dependencies": {
     "babel-core": "^6.26.3",
-    "faker": "^4.1.0"
+    "faker": "^5.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -77,5 +77,5 @@
     "test:unit": "./node_modules/.bin/mocha --require babel-core/register -R spec ./test/unit/**",
     "test:coverage": "./node_modules/.bin/nyc --reporter=lcov --include=**/lib/**/*.js --exclude=**/*.spec.js --report-dir=./test/unit/coverage npm run test:unit"
   },
-  "version": "0.4.1"
+  "version": "0.4.2"
 }
