@@ -1,5 +1,22 @@
 # Changelog
 
+## [v0.4.2](https://github.com/Cambalab/fake-data-generator/tree/v0.4.2) (2020-12-10)
+
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.4.1...v0.4.2)
+
+**Implemented enhancements:**
+
+- Dockerize the github changelog generation release step [\#71](https://github.com/Cambalab/fake-data-generator/issues/71)
+
+**Fixed bugs:**
+
+- Example seems to generate null instead of date.between [\#74](https://github.com/Cambalab/fake-data-generator/issues/74)
+
+**Merged pull requests:**
+
+- 74 example seems to generate null instead of date.between [\#75](https://github.com/Cambalab/fake-data-generator/pull/75) ([sgobotta](https://github.com/sgobotta))
+- 0.4.1 [\#73](https://github.com/Cambalab/fake-data-generator/pull/73) ([sgobotta](https://github.com/sgobotta))
+
 ## [v0.4.1](https://github.com/Cambalab/fake-data-generator/tree/v0.4.1) (2020-10-03)
 
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.4.0...v0.4.1)
