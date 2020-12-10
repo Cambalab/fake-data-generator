@@ -4,7 +4,7 @@
   "description": "Just a small script to create fake data files given a JSON model",
   "dependencies": {
     "babel-core": "^6.26.3",
-    "faker": "^4.1.0"
+    "faker": "^5.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
