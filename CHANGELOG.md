@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.4.3](https://github.com/Cambalab/fake-data-generator/tree/v0.4.3) (2021-03-31)
+
+[Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.4.2...v0.4.3)
+
+**Merged pull requests:**
+
+- Bump y18n from 4.0.0 to 4.0.1 [\#79](https://github.com/Cambalab/fake-data-generator/pull/79) ([dependabot[bot]](https://github.com/apps/dependabot))
+- 0.4.2 [\#76](https://github.com/Cambalab/fake-data-generator/pull/76) ([sgobotta](https://github.com/sgobotta))
+
 ## [v0.4.2](https://github.com/Cambalab/fake-data-generator/tree/v0.4.2) (2020-12-10)
 
 [Full Changelog](https://github.com/Cambalab/fake-data-generator/compare/v0.4.1...v0.4.2)
